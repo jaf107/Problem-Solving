@@ -1,7 +1,5 @@
 **Problem Solving Repository**
 
-![Problem Solving](link_to_image_or_logo.png) (Replace `link_to_image_or_logo.png` with an appropriate image or logo if you have one)
-
 ## Description
 
 Welcome to the "Problem Solving" repository! This repository houses a collection of code solutions from various programming contests and platforms, showcasing my journey in competitive programming and problem-solving. Here, you will find solutions from contests held on platforms such as Codeforces, AtCoder, CodeChef, and more. Additionally, this repository includes code implementations related to competitive programming algorithms, ICPC Regionals, HackerEarth, LeetCode, academic projects, and specialized topics like Segment Trees.
