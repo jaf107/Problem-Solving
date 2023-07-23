@@ -1,0 +1,52 @@
+# Compiled Object Files
+*.o
+*.obj
+
+# Compiled Dynamic Libraries
+*.so
+*.dylib
+*.dll
+
+# Executables
+*.exe
+
+# Compiled Static Libraries
+*.a
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio
+*.sdf
+*.suo
+*.ncb
+*.aps
+*.vcxproj.filters
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+
+# Eclipse
+.settings/
+bin/
+gen/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+CMakeModules/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Miscellaneous
+*~
+*.swp
+.DS_Store
+Thumbs.db
