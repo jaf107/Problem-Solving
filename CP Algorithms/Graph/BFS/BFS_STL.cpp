@@ -1,11 +1,9 @@
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #define pb push_back
-
 
 using namespace std;
 typedef long long ll;
-
 
 vector<bool> used;
 vector<vector<ll>> g;
@@ -15,26 +13,26 @@ void edge(ll a, ll b)
 {
     g[a].pb(b);
 
-//    for undirected graph add this line
-//    g[b].pb(a);
+    //    for undirected graph add this line
+    //    g[b].pb(a);
 }
 
 void printPath(ll u)
 {
-    if( !used[u])
+    if (!used[u])
     {
         cout << "No Path!";
     }
     else
     {
         vector<ll> path;
-        for(ll v = u; v != -1; v = p[v])
+        for (ll v = u; v != -1; v = p[v])
             path.push_back(v);
 
         reverse(path.begin(), path.end());
         cout << "Path for " << u << " is : ";
 
-        for(ll v: path)
+        for (ll v : path)
             cout << v << " ";
     }
     cout << endl;
@@ -46,18 +44,18 @@ void bfs(ll s)
 
     q.push(s);
     used[s] = true;
-//    p[s] = -1;
+    //    p[s] = -1;
 
-    while( !q.empty() )
+    while (!q.empty())
     {
         ll v = q.front();
         q.pop();
 
-//        cout << v << " ";
+        //        cout << v << " ";
 
-        for(ll u : g[v])
+        for (ll u : g[v])
         {
-            if( !used[u] )
+            if (!used[u])
             {
                 used[u] = true;
                 d[u] = d[v] + 1;
@@ -67,8 +65,6 @@ void bfs(ll s)
             }
         }
     }
-
-
 }
 
 int main()
@@ -82,24 +78,27 @@ int main()
     p.assign(n, -1);
 
     int a, b;
-    for (int i = 0; i < e; i++) {
+    for (int i = 0; i < e; i++)
+    {
         cin >> a >> b;
         edge(a, b);
     }
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         if (!used[i])
             bfs(i);
     }
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cout << "Distance for " << i << " is - " << d[i] << endl;
     }
 
-    for (int i = 0; i < n; i++) {
-//        printPath(i);
+    for (int i = 0; i < n; i++)
+    {
+        printPath(i);
     }
-
 
     return 0;
 }

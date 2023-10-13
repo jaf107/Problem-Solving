@@ -50,3 +50,7 @@ install_manifest.txt
 *.swp
 .DS_Store
 Thumbs.db
+
+#.cph
+*.prob
+*.bin
