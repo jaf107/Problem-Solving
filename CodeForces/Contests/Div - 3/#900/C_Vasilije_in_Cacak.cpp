@@ -33,19 +33,23 @@ int main()
     while (t--)
     {
         solve();
-        cout << "\n";
+        // cout << "\n";
     }
 
     return 0;
 }
 void solve()
 {
-    ll n;
-    cin >> n;
-
-    for (int i = 0; i < n; i++)
+    ll n, k, x;
+    cin >> n >> x >> k;
+    if ((2 * k >= x * (x + 1)) && (2 * k <= n * (n + 1) - (n - x) * (n - x + 1)))
     {
-        cout << i * 2 + 1 << " ";
+        YES;
     }
+    else
+    {
+        NO;
+    }
+
     return;
 }

@@ -38,14 +38,31 @@ int main()
 
     return 0;
 }
+int val(string s)
+{
+    int ans = 0;
+    for (int i = 0; i < s.size(); i++)
+    {
+        ans += (s[i] - '0');
+    }
+    return ans;
+}
 void solve()
 {
-    ll n;
-    cin >> n;
+    ll x, k;
+    cin >> x >> k;
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < 19; i++)
     {
-        cout << i * 2 + 1 << " ";
+        string xs = to_string(x + i);
+        int v = val(xs);
+        // cout << v << " ";
+        if ((v) % k == 0)
+        {
+            cout << x + i;
+            return;
+        }
     }
+
     return;
 }

@@ -33,19 +33,45 @@ int main()
     while (t--)
     {
         solve();
-        cout << "\n";
+        // cout << "\n";
     }
 
     return 0;
 }
 void solve()
 {
-    ll n;
-    cin >> n;
+    int n, k;
+    cin >> n >> k;
+    string s;
+    cin >> s;
 
-    for (int i = 0; i < n; i++)
+    map<char, int> map;
+    for (auto x : s)
     {
-        cout << i * 2 + 1 << " ";
+        map[x]++;
     }
+
+    int odd = 0, even = 0;
+    for (auto x : map)
+    {
+        if (x.second % 2 == 0)
+        {
+            even++;
+        }
+        else
+        {
+            odd++;
+        }
+    }
+
+    if (odd - k > 1)
+    {
+        NO;
+    }
+    else
+    {
+        YES;
+    }
+
     return;
 }

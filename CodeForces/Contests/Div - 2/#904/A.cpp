@@ -40,12 +40,17 @@ int main()
 }
 void solve()
 {
-    ll n;
-    cin >> n;
+    ll x, k;
+    cin >> x >> k;
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < 11; i++)
     {
-        cout << i * 2 + 1 << " ";
+        if ((x + i) % k == 0)
+        {
+            cout << x;
+            return;
+        }
     }
+
     return;
 }

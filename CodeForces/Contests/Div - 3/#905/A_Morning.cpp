@@ -40,12 +40,37 @@ int main()
 }
 void solve()
 {
-    ll n;
+    string n;
     cin >> n;
 
-    for (int i = 0; i < n; i++)
+    int prev = 1;
+    int c = 0;
+    for (int i = 0; i < 4; i++)
     {
-        cout << i * 2 + 1 << " ";
+        int steps = 0;
+        int num = n[i] - '0';
+        if (num == 0 && prev == 0)
+        {
+        }
+        else if (num == 0)
+        {
+            steps += (10 - prev);
+        }
+        else if (prev == 0)
+        {
+            steps += (10 - num);
+        }
+        else
+        {
+            steps += abs(num - prev);
+        }
+
+        c += steps;
+        c++;
+        prev = num;
+        // cout << num << " " << steps << " " << c << endl;
     }
+    cout << c;
+
     return;
 }

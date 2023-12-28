@@ -41,33 +41,23 @@ int main()
 }
 void solve()
 {
+    ll n;
+    cin >> n;
 
-    vector<ll> a(3);
-    for(ll i = 0; i < 3; i++)
+    vector<ll> a(n);
+    int pos = 0, neg = 0;
+    bool zero = false;
+    for(ll i = 0; i < n; i++)
     {
         cin >> a[i];
+        if(a[i] == 0){
+            zero = true;
+        }else if(a[i] > 0){
+            pos++;
+        }else{
+            neg++;
+        }
     }
-
-    sort(a.begin(), a.end());
-
-
-
-//    int lcm = __gcd(__gcd(a[0], a[1]), a[2]);
-    int lcm = a[0];
-
-    int cuts = ((a[1]/lcm) -1) + ((a[2]/lcm) - 1)  ;
-//    cout << "CUTS : " << cuts ;
-
-    if(a[0] == a[1] && a[1] == a[2]){
-        cout << "YES";
-    }
-    else if(a[1]%a[0] == 0 && a[2]%a[0] && cuts <= 3){
-        cout << "YES";
-    }
-    else{
-        cout << "NO";
-    }
-
 
 
 
